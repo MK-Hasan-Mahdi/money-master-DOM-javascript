@@ -33,7 +33,7 @@ document.getElementById('calcu-btn').addEventListener
 
         const balanceAmount = parseFloat(balanceTotal.innerText);
         if (balanceAmount < 0) {
-            alert('cant negative value');
+            alert('Cant give negative value');
         }
     })
 
@@ -53,4 +53,11 @@ document.getElementById('save-btn').addEventListener
         // remaining balance
         let remainBalance = document.getElementById('balance-remaining');
         remainBalance.innerText = balanceAfterExp - savingAmountTotal;
+        if (remainBalance.innerText < 0) {
+            alert('h')
+            remainBalance.innerText = "hjhgjhgsdgh"
+
+        } else if (savingAmountValue <= 0) {
+            alert('hsdfds')
+        }
     })
