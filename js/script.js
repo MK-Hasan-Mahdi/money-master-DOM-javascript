@@ -27,7 +27,6 @@ document.getElementById('calcu-btn').addEventListener
         const totalExpenseAmount = foodCostValue + rentCostValue + clothCostValue;
         totalExp.innerText = totalExpenseAmount;
 
-
         // balance after expenses
         const balanceTotal = document.getElementById('balance-after-exp');
         balanceTotal.innerText = incomeAmountValue - totalExpenseAmount;
@@ -37,7 +36,7 @@ document.getElementById('calcu-btn').addEventListener
             alert('You cross your income income limit');
             totalExp.innerText = 'You cross your income income limit';
         }
-    })
+    });
 
 
 
@@ -62,9 +61,7 @@ document.getElementById('save-btn').addEventListener
         let msgDisplayText = msgDisplay.innerText;
         let remainBalance = document.getElementById('balance-remaining');
         remainBalance.innerText = balanceAfterExp - savingAmountTotal;
-
-        // typeof and savingamount value validation
-        if (savingAmountValue <= 0 || typeof savingAmountValue != 'number') {
+        if (savingAmountValue <= 0 || typeof savingAmountValue == 'number') {
             alert('Give valid percantage input');
             msgDisplay.innerText = 'Give valid percantage input';
         }

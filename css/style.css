@@ -1,7 +1,9 @@
-/* .col-centered{
-    margin: 0 auto;
-    float: none;
-} */
+
+
+/* title */
+#title-page{
+    color: #31A5AC;
+}
 
 /* input field left */
 .form-center{
