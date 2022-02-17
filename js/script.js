@@ -4,7 +4,7 @@ function getInputValue(inputId) {
     const inputAmount = parseFloat(inputField.value);
     if (isNaN(inputAmount) || inputAmount < 0) {
         inputField.value = '';
-        return alert('Please give number format and dont give negative number')
+        return alert('Please give number format and dont give negative number');
     } else {
         const inputAmountValue = parseFloat(inputAmount);
         // clear expenses field area 
@@ -13,6 +13,7 @@ function getInputValue(inputId) {
     }
 }
 
+//  income and expenses calculation
 document.getElementById('calcu-btn').addEventListener
     ('click', function () {
         // income
@@ -32,8 +33,8 @@ document.getElementById('calcu-btn').addEventListener
         balanceTotal.innerText = incomeAmountValue - totalExpenseAmount;
 
         const balanceAmount = parseFloat(balanceTotal.innerText);
-        if (balanceAmount < 0) {
-            alert('Cant give negative value');
+        if (balanceAmount < 0 || totalExpenseAmount > incomeAmountValue) {
+            alert('Cant give negative value & You maybe in Loan');
         }
     })
 
@@ -41,23 +42,29 @@ document.getElementById('calcu-btn').addEventListener
 
 document.getElementById('save-btn').addEventListener
     ('click', function () {
+        // percentage of saving amount
         const totalExp = document.getElementById('total-exp').innerText;
         const balanceAfterExp = document.getElementById('balance-after-exp').innerText;
         const incomeAmountValue = parseFloat(totalExp) + parseFloat(balanceAfterExp);
         let savingAmountValue = document.getElementById('saving-percent').value;
         let savingAmountTotal = (incomeAmountValue * savingAmountValue) / 100;
-        // console.log(savingAmountTotal);
-        let savingTotal = document.getElementById('saving-total');
-        savingTotal.innerText = savingAmountTotal;
+        if (savingAmountTotal > balanceAfterExp) {
+            alert('You have not enough balance');
+        } else {
+            let savingTotal = document.getElementById('saving-total');
+            savingTotal.innerText = savingAmountTotal;
+        }
+
 
         // remaining balance
+        let msgDisplay = document.getElementById('message-display');
+        let msgDisplayText = msgDisplay.innerText;
         let remainBalance = document.getElementById('balance-remaining');
         remainBalance.innerText = balanceAfterExp - savingAmountTotal;
-        if (remainBalance.innerText < 0) {
-            alert('h')
-            remainBalance.innerText = "hjhgjhgsdgh"
 
-        } else if (savingAmountValue <= 0) {
-            alert('hsdfds')
+        // typeof and savingamount value validation
+        if (savingAmountValue <= 0 || typeof savingAmountValue != 'number') {
+            alert('Give valid percantage input');
+            msgDisplay.innerText = 'Give valid percantage input';
         }
-    })
+    });

@@ -1,0 +1,16 @@
+/* .col-centered{
+    margin: 0 auto;
+    float: none;
+} */
+
+/* input field left */
+.form-center{
+    margin-left: 100px;
+}
+
+/* error message display */
+.msg-dis{
+    color: wheat;
+    background-color: tomato;
+    margin-top: 20px;
+}
