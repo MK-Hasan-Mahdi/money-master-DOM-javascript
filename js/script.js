@@ -33,8 +33,9 @@ document.getElementById('calcu-btn').addEventListener
         balanceTotal.innerText = incomeAmountValue - totalExpenseAmount;
 
         const balanceAmount = parseFloat(balanceTotal.innerText);
-        if (balanceAmount < 0 || totalExpenseAmount > incomeAmountValue) {
-            alert('Cant give negative value & You maybe in Loan');
+        if (totalExpenseAmount > incomeAmountValue) {
+            alert('You cross your income income limit');
+            totalExp.innerText = 'You cross your income income limit';
         }
     })
 
