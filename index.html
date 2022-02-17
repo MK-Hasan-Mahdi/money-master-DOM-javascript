@@ -24,47 +24,75 @@
                     <form class="row g-3 text-center">
                         <div>
                             <h5 class="text-center">Income</h5>
-                            <label for="income">Income:</label>
-                            <input id="income-field" name="income" size="30" type="text" />
 
+                            <div class="row mb-3">
+                                <label for="colFormLabelSm"
+                                    class="col-sm-2 col-form-label col-form-label-sm">Income:</label>
+                                <div class="col-sm-10">
+                                    <input id="income-field" type="text" class="form-control form-control-sm w-50"
+                                        placeholder="income-amount">
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <h5 class="text-center">Expenses</h5>
-                            <label for="food">Food:</label>
-                            <input id="food-cost" type="text" name="food" size="30" />
+
+                            <div class="row mb-3">
+                                <label for="colFormLabelSm"
+                                    class="col-sm-2 col-form-label col-form-label-sm">Food:</label>
+                                <div class="col-sm-10">
+                                    <input id="food-cost" type="text" class="form-control form-control-sm w-50"
+                                        placeholder="food-amount">
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <label for="rent">Rent:</label>
-                            <input id="rent-cost" type="text" name="rent" size="30" />
+
+                        <div class="row mb-3">
+                            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Rent:</label>
+                            <div class="col-sm-10">
+                                <input id="rent-cost" type="text" class="form-control form-control-sm w-50"
+                                    placeholder="rent-amount">
+                            </div>
                         </div>
-                        <div>
+
+                        <div class="row mb-3">
+                            <label for="colFormLabelSm"
+                                class="col-sm-2 col-form-label col-form-label-sm">Clothes:</label>
+                            <div class="col-sm-10">
+                                <input id="cloth-cost" type="text" class="form-control form-control-sm w-50"
+                                    placeholder="clothe-amount">
+                            </div>
+                        </div>
+                        <!-- <div>
                             <label for="clothe">Clothes:</label>
                             <input id="cloth-cost" type="text" name="clothe" size="30" />
-                        </div>
+                        </div> -->
                         <div class="col-12">
                             <button id="calcu-btn" type="button" class="btn btn-primary">Calculate</button>
                         </div>
                         <h5 class="text-center">Total Expenses: <span id="total-exp">00</span></h5>
                         <h5 class="text-center">Balance: <span id="balance-after-exp">00</span></h5>
 
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <label for="saving">Save:</label>
-                                <input id="saving-percent" name="saving" size="30" type="text" />
+                        <div class="d-flex justify-content-center">
+                            <div class="row mb-3">
+                                <label for="colFormLabelSm"
+                                    class="col-sm-2 col-form-label col-form-label-sm">Save:</label>
+                                <div class="col-sm-10">
+                                    <input id="saving-percent" type="text" class="form-control form-control-sm w-50"
+                                        placeholder="save-amount">
+                                </div>
                             </div>
-                            <span>%</span>
                             <div>
                                 <button id="save-btn" type="button" class="btn btn-primary">Save</button>
                             </div>
                         </div>
                         <h5 class="text-center">Saving Amount: <span id="saving-total">00</span></h5>
-                        <h5 id="balance-remaining" class="text-center">Remaining Balance: 2500</h5>
+                        <h5 id="balance-remaining" class="text-center">Remaining Balance: <span
+                                id="saving-total">00</span></h5>
                     </form>
                 </div>
             </div>
         </section>
-
-
     </main>
     <script src="js/script.js"></script>
 </body>
