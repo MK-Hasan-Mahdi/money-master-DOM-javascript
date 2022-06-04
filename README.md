@@ -2,8 +2,8 @@
 
 Live Site Link : https://moneymaster-dom.netlify.app/
 
-## Used Features
-
+## Used 
 - HTML
 - CSS
+- Javacript DOM
 - Bootstrap
