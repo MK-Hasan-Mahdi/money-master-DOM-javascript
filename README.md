@@ -7,9 +7,3 @@ Live Site Link : https://moneymaster-dom.netlify.app/
 - HTML
 - CSS
 - Bootstrap
-
-## 🛠 Skills
-HTML, CSS, Bootstrap, Tailwind, Javascript, React, Firebase...
-
-## 🚀 About Me
-I'm a front-end developer...
