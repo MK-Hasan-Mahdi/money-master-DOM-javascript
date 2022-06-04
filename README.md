@@ -1,6 +1,6 @@
 # Money Master DOM Javascript
 
-Live Site Link : https://moneymaster-dom.netlify.app/
+Live Site Link : https://moneycalcu.netlify.app/
 
 ## Used 
 - HTML
